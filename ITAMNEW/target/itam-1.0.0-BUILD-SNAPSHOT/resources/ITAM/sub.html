@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>근로복지공단 ITAM</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/import.css" />
+    <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <style>
+        * {box-sizing: border-box;}
+    </style>
+</head>
+<body>
+<div class="sub-wrap">
+    <div class="sub-header">
+        <div class="title">
+            <a href="#"><img src="img/common/icon-title.png"> &nbsp;&nbsp;
+            <span>ITAM&nbsp;<em>IT Asset Management System</em></span>
+            </a>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="#" title="자산관리">자산관리</a></li>
+                <li><a href="#" title="공통">공통</a></li>
+                <li><a href="#" title="기준정보">기준정보</a></li>
+            </ul>
+        </div>
+        <div class="welcome">
+            <img src="img/common/icon-user.png">
+            <span><em>홍길동</em> 님 환영합니다.</span>
+            <a href="#" title="로그아웃">로그아웃</a>
+        </div>
+    </div>
+    <div class="sub-container">
+        <div class="top-cont">
+            <div class="fl">
+                <p>사고사례 보고서</p>
+            </div>
+            <div class="fr">
+                <ul>
+                    <li class="fl">
+                        <a class="btn-top" href="#" title="출력">출력</a>
+                    </li>
+                    <li class="fl">
+                        <a class="btn-top" href="#" title="다운로드">다운로드</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="middle-cont">
+            <form method="post" action="">
+                <div class="search-box">
+                    <div class="fl">
+                        <div>
+                            <p>기간</p>
+                            <div>
+                                <input type="text">
+                                <img class="cal" src="img/common/icon-calendar.png">
+                            </div>
+                            &nbsp;&nbsp;~&nbsp;&nbsp;
+                            <div>
+                                <input type="text">
+                                <img class="cal" src="img/common/icon-calendar.png">
+                            </div>
+                        </div>
+                        <div>
+                            <p>프로젝트</p>
+                            <input type="text">
+                        </div>
+                        <div>
+                            <p>사례작성부서</p>
+                            <select></select>
+                        </div>
+                    </div>
+                    <div class="fl">
+                        <div>
+                            <p>사례작성자</p>
+                            <input class="readOnly" type="text">
+                        </div>
+                        <div>
+                            <p>승인부서</p>
+                            <select></select>
+                        </div>
+                        <div>
+                            <p>체크박스 예시</p>
+                            <input type="radio" name="check" id="rdy" value="yes">
+                            <label for="rdy">Yes</label> &nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="radio" name="check" id="rdn" value="no">
+                            <label for="rdn">No</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-search-wrap">
+                    <a class="btn-search" href="#" title="조회">조회</a>
+                    <a class="btn-search" href="#" title="검색초기화">검색 초기화</a>
+                </div>
+            </form>
+        </div>
+        <div class="bottom-cont">
+            <div class="section  wp100">
+                <div class="btn-div">
+                    <p class="fl">사고사례내역</p>
+                    <ul class="fr">
+                        <li>
+                            <a class="btn-right" href="#" title="신규">신규</a>
+                            <a class="btn-right" href="#" title="수정">수정</a>
+                            <a class="btn-right" href="#" title="삭제">삭제</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="table-div scro-x">
+                    <table class="table-type01">
+                        <colgroup>
+                            <col class="wp10">
+                            <col class="wp19">
+                            <col>
+                            <col>
+                            <col class="wp25">
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">IT_ASSET_NO</th>
+                                <th scope="col">MODEL_NAME</th>
+                                <th scope="col">CPU</th>
+                                <th scope="col">MORY</th>
+                                <th scope="col">DISK_CPCTY_CO</th>
+                                <th scope="col">LEND_YN</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Mecha가공품</td>
+                                <td>STW 11-0500-0030</td>
+                                <td></td>
+                                <td>CHGUIDEBELLOWS-02-01</td>
+                                <td>Y</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sub-footer">
+        <div class="fl">
+            <img src="img/common/icon-phone.png">
+            <ul>
+                <li class="fl">문의사항</li>
+                <li class="fl">[HCNC] 052-258-7071</li>
+                <li class="fl">김태완 부장</li>
+                <li class="fl">twkim@hcnc.co.kr</li>
+            </ul>
+        </div>
+        <div class="fr">
+            Copyright © 근로복지공단. All rights Reserved.
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

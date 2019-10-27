@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<!-- 기준정보 -->
+<mapper namespace="com.hcnc.itam.service.CodeManageService">
+
+    <select id="getCodeManageSearch" parameterType="map" resultType="map">
+		    SELECT FG, CODE, `DESC`
+  			  FROM ASSET_FG_CODE
+  			 WHERE 1 = 1
+			<if test = "gubun == 'CODE' &amp; fgDescSearch != null &amp; fgDescSearch != ''">
+			   AND CODE = #{fgDescSearch}
+			</if>
+			<if test = "gubun == 'DESC' &amp; fgDescSearch != null &amp; fgDescSearch != ''">
+			   AND `DESC` LIKE #{fgDescSearch}
+			</if>
+    </select>
+    
+    <select id="getUserAuthPersonAdd" parameterType="map" resultType="string">
+		<![CDATA[
+		INSERT INTO ITAM.dbo.sys_user
+		VALUES ( #{emplNo}, #{nm}, #{ofcps}, #{dept}, #{telNo},GETDATE(), 
+				 #{emplNo}, GETDATE(), #{emplNo}, #{emailAddr} )
+		]]>
+    </select>
+    
+    <select id="getUserAuthPersonModify" parameterType="map" resultType="string">
+		<![CDATA[
+		UPDATE ITAM.dbo.sys_user
+		   SET NM = #{nm},
+		       OFCPS = #{ofcps},
+		   	   DEPT = #{dept},
+		       TEL_NO = #{telNo},
+		       EMAIL_ADDR = #{emailAddr},
+		       LST_INPUT_DY = GETDATE(),
+		       LST_INPUT_EMPL_NO = #{nm}
+         WHERE EMPL_NO = #{emplNo}
+		]]>
+    </select>
+    
+    <select id="getUserAuthPersonRemove" parameterType="map" resultType="string">
+		<![CDATA[
+			DELETE FROM ITAM.dbo.sys_user
+			 WHERE EMPL_NO = #{emplNo}
+		]]>
+    </select>
+    
+    <select id="getUserAuthPersonSearchCnt" parameterType="map" resultType="int">
+		<![CDATA[
+			SELECT count(*)
+  			  FROM SYS_USER
+		]]>
+    </select>
+    
+    <select id="getUserInfoSearchByEmplNo" parameterType="map" resultType="map">
+		<![CDATA[
+		    SELECT EMPL_NO, NM, OFCPS, DEPT, TEL_NO, EMAIL_ADDR
+  			  FROM SYS_USER
+  			 WHERE EMPL_NO = #{emplNo}
+		]]>
+    </select>    
+      
+</mapper>
