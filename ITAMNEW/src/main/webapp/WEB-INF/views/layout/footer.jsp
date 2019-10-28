@@ -6,12 +6,12 @@
             <img src="resources/images/icon-phone.png" alt="문의사항 아이콘">
             <ul>
                 <li class="fl">문의사항</li>
-                <li class="fl">[HCNC] 052-258-7071</li>
-                <li class="fl">김태완 부장</li>
-                <li class="fl">twkim@hcnc.co.kr</li>
+                <li class="fl"></li>
+                <li class="fl">김 부장</li>
+                <li class="fl"></li>
             </ul>
         </div>
         <div class="fr pd-r50">
-            Copyright © 근로복지공단. All rights Reserved.
+            Copyright © . All rights Reserved.
         </div>
     </div> <!-- .sub-footer end-->
